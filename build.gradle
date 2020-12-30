@@ -1,23 +1,25 @@
-//buildscript {
-//    repositories {
-//        mavenCentral()
-//        jcenter()
-//    }
-//
-//    dependencies {
-//        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE")
-//    }
-//}
-//apply plugin: 'spring-boot'
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE")
+    }
+}
+apply plugin: 'java'
+apply plugin: 'spring-boot'
 //옛날 방식
 
-
-plugins {
-    id "org.springframework.boot" version "1.4.3.RELEASE"
-    id 'java'
+springBoot {
+    mainClass = 'com.study.boot14.Application'
 }
 
 sourceCompatibility = 1.8
+
+group 'com.study.boot14'
+version '0.0.1-SNAPSHOT'
 
 repositories {
     mavenCentral()
