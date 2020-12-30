@@ -1,0 +1,30 @@
+//buildscript {
+//    repositories {
+//        mavenCentral()
+//        jcenter()
+//    }
+//
+//    dependencies {
+//        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE")
+//    }
+//}
+//apply plugin: 'spring-boot'
+//옛날 방식
+
+
+plugins {
+    id "org.springframework.boot" version "1.4.3.RELEASE"
+    id 'java'
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+}
